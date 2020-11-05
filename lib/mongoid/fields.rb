@@ -10,6 +10,8 @@ module Mongoid
   module Fields
     extend ActiveSupport::Concern
 
+    StringifiedSymbol = Mongoid::StringifiedSymbol
+
     # For fields defined with symbols use the correct class.
     #
     # @since 4.0.0
@@ -28,6 +30,7 @@ module Mongoid
       regexp: Regexp,
       set: Set,
       string: String,
+      stringified_symbol: StringifiedSymbol,
       symbol: Symbol,
       time: Time
     }.with_indifferent_access
